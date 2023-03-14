@@ -24,7 +24,6 @@ if type == "1" or "2" or "3" or "4":
         webbrowser.open_new_tab("https://www.virustotal.com/gui/domain/"+url)
         webbrowser.open_new_tab("https://www.virustotal.com/gui/search/https%253A%252F%252F"+url)
         webbrowser.open_new_tab("https://www.virustotal.com/gui/search/http%253A%252F%252F"+url)
-        webbrowser.open_new_tab("https://urlscan.io/")
     else:
         quit()
 
