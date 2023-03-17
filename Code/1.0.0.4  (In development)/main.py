@@ -1,6 +1,5 @@
-import webbrowser
-import time
-import pymsgbox
+import webbrowser, time, pymsgbox
+
 print("1 for http")
 print("2 for https")
 print("3 to scan only domain")
