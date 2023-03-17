@@ -39,4 +39,3 @@ else:
     print("error please type only 1 2 3 or 4") 
     quit()
 
-
