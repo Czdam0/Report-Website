@@ -1,2 +1,2 @@
-# Report-Webiste
+# Report-Website
 OPEN SOURCE WEBSITE SCANER AND REPORTER
