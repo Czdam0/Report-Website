@@ -61,10 +61,8 @@ if type == "1" or "2" or "3" or "4":
     else:
         print("error") 
         pymsgbox.alert('Report a Website had an error', 'error')
-        time.sleep(5)
         quit()
 else:
     print("error") 
     pymsgbox.alert('Report a Website had an error', 'error')
-    time.sleep(5)
     quit()
