@@ -1,20 +1,30 @@
-import webbrowser, time, pymsgbox, unhandled_exit
+import webbrowser, pymsgbox, unhandled_exit
 unhandled_exit.activate()
-type = pymsgbox.confirm('Do you want to report this site?', 'Report', ["http", 'https', 'scan only domain', 'full scan'])
 
-print(type)
+def error(reasonerror):
+    if reasonerror == "" or " ":
+        print("error") 
+        pymsgbox.alert('Report a Website had an error', 'error')
+        quit()
+    else:
+        print("error "+reasonerror) 
+        pymsgbox.alert('Report a Website had an error '+reasonerror, 'error '+reasonerror)
+        quit()    
 
 def checkreason(reason):
-    if reason == None or "" or " ":
-        error()
-    else:
+    if reason != "" or " ":
         return reason
+    else:
+        print("url empty")
+        error("url empty")
+
     
 def checkurl(url):
-    if url == None or "" or " ":
-        error()
-    else:
+    if url != "" or " ":
         return url
+    else:
+        print("url empty")
+        error("url empty")
 
 def checknext(check):
     if check == 'stop':
@@ -22,10 +32,6 @@ def checknext(check):
         quit()
     else:
         return print("good")
-def error():
-    print("error") 
-    pymsgbox.alert('Report a Website had an error', 'error')
-    quit()
 
 def Report(url):
 
@@ -84,7 +90,8 @@ def Report(url):
     checknext(pymsgbox.confirm('Continue?', 'continue?', ["continue", 'stop']))
     webbrowser.open_new_tab("mailto:reportphishing@apwg.org?subject="+url+"&body="+url+"%20rwas%20repoted%20using%20an%20automated%20tool%20for%20the%20reason"+reason)
 
-
+type = pymsgbox.confirm('Do you want to report this site?', 'Report', ["http", 'https', 'scan only domain', 'full scan'])
+print(type)
 
 if type == "http" or "https" or "scan only domain" or "full scan":
 
