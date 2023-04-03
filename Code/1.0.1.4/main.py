@@ -1,4 +1,5 @@
-import webbrowser, time, pymsgbox
+import webbrowser, time, pymsgbox, unhandled_exit
+unhandled_exit.activate()
 type = pymsgbox.confirm('Do you want to report this site?', 'Report', ["http", 'https', 'scan only domain', 'full scan'])
 
 print(type)
@@ -99,7 +100,7 @@ if type == "http" or "https" or "scan only domain" or "full scan":
         if report == "Yes":
             Report(url)
         else:
-            pass
+            exit()
     elif type == "https":
         print("please copy url without dir like this www.example.com and no like this https://www.example.com/home")
         url = checkurl(pymsgbox.prompt('url? (please copy url without dir like this www.example.com and no like this https://www.example.com/home)'))
@@ -112,7 +113,7 @@ if type == "http" or "https" or "scan only domain" or "full scan":
         if report == "Yes":
             Report(url)
         else:
-            pass
+            exit()
     elif type == "scan only domain":
         print("please copy url without dir like this www.example.com and no like this https://www.example.com/home")
         url = checkurl(pymsgbox.prompt('url? (please copy url without dir like this www.example.com and no like this https://www.example.com/home)'))
@@ -125,7 +126,7 @@ if type == "http" or "https" or "scan only domain" or "full scan":
         if report == "Yes":
             Report(url)
         else:
-            pass
+            exit()
     elif type == "full scan":
         print("please copy url without dir like this www.example.com and no like this https://www.example.com/home")
         url = checkurl(pymsgbox.prompt('url? (please copy url without dir like this www.example.com and no like this https://www.example.com/home)'))
@@ -140,7 +141,7 @@ if type == "http" or "https" or "scan only domain" or "full scan":
         if report == "Yes":
             Report(url)
         else:
-            pass
+            exit()
     else:
         error()
 else:
