@@ -189,4 +189,4 @@ pyrightconfig.json
 .history
 .ionide
 
-.ignored/
+ignored/
